@@ -3,6 +3,8 @@ import { Switch, Route } from 'react-router';
 import './App.css';
 import Home from './pages/Home';
 import Starred from './pages/Starred';
+import Error from './pages/Error';
+import Show from './pages/Show';
 
 
 function App() {
@@ -14,8 +16,11 @@ function App() {
         <Route exact path="/starred">
           <Starred />
         </Route>
+        <Route exact path="/show/:id">
+          <Show />
+        </Route>
         <Route>
-          <div>404 Not Found,Try Again</div>
+          <Error />
         </Route>
       </Switch>
   );
